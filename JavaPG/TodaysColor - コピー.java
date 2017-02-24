@@ -7,7 +7,6 @@ public class TodaysColor {
 		int month = 0;
 		int day = 0;
 	 	char[] myName = {'石','川','唯'};
-		final int[] DAY_OF_MONTH = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}
 		final String[] COLOR = {"白", "黒", "ブルー", "緑", "黄", "ホワイト", "赤", "純白", "紫"};
 		String strMyName = "";
 
@@ -49,7 +48,7 @@ public class TodaysColor {
 			return;
 		}
 		//日の値チェック
-		if (day > 0 && day <= DAY_OF_MONTH[month - 1] ){
+		if (day > 31 | day < 1 ){
 			System.out.println("月と日の値が正しくありません。正しい値を入力してください。");
 			return;
 		}
@@ -63,5 +62,13 @@ public class TodaysColor {
 		System.out.println("ラッキーカラーは" + COLOR[colorID] + "です。");
 
 
+	//	System.out.println("最初の引数は " + args[0] + " です。");
+	//	System.out.println("2 番目の引数は " + args[1] + " です。");
+	//	for (int i = 0; i < myName.length; i++) {
+	//		System.out.print(myName[i]);
+	//	}
+	//	System.out.println(myName[0]);
+	//	System.out.println(myName[1]);
+	//	System.out.println(myName[2]);
 	}
 }
